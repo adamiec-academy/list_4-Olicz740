@@ -1,10 +1,10 @@
 def is_palindrome(text):
     text = text.lower()
-    x = text.split()
-    for i in range(0, int(text[len(text)/2])):
-        if text[i] == text[len(text)+1]:
-            text[len(text)] = text[len(text)] - 1
-            return True
-        else:
+    text = text.split()
+    list =[]
+    for i in text:
+        list.insert(0, i)
+    for i in range(len(text)):
+        if list[i] != text[i]:
             return False
-print(is_palindrome("ala"))
+    return True
