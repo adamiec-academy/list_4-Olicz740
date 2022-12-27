@@ -5,5 +5,11 @@ def info(data):
         print()
 
 
-def border_map(a, b):
-    return [['.']]
+def border_map(a,b):
+    board = []
+    board.append(a * ["X"])
+    for _ in range(b-2):
+        board.append(["X"] + (a -2) * ['.'] + ["X"])
+    if b > 1:
+     board.append(a * ["X"])
+    return board
